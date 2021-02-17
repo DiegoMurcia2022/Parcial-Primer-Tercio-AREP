@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* edu.eci.arep.webapp.WebApp
+web: java -cp target/classes:target/dependency/* edu.eci.arep.clima.WebApp
