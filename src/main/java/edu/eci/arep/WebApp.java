@@ -1,7 +1,5 @@
 package edu.eci.arep;
 
-import edu.eci.arep.WeatherServiceImpl;
-
 import static spark.Spark.*;
 import com.google.gson.Gson;
 
@@ -13,7 +11,7 @@ public class WebApp {
 
         get("/clima", (req, res) -> {
             String city = req.queryParams("lugar");
-            String json = WeatherServiceImpl.getCityWeather(city);
+            String json = WeatherService.getCityWeather(city);
 
             return gson.toJson(json);
         });
@@ -26,6 +24,4 @@ public class WebApp {
 
         return 4567;
     }
-
-
 }
